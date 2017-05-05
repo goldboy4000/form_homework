@@ -3,35 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js">
+    </script>
 </head>
 <body>
-    <form>
-        <label for="name">Name</label>
-        <input type="text" id="name">
+    <form id="registerForm">
 
-        <label for="email">E-mail</label>
-        <input type="text" id="email">
+        <div>
+            <label class="label" for="name_input">Name</label>
+            <input class="input" type="text" id="name_input">
+            <p class="help is-danger" id="name_input_help">invalid</p>
+        </div>
 
-        <label for="password">Password</label>
-        <input type="text" id="password">
+        <div>
+            <label class="label" for="email_input">E-mail</label>
+            <input class="input" type="text" id="email_input">
+            <p class="help is-danger" id="email_input_help">invalid</p>
+        </div>
 
-        <label for="gender">Gender</label>
-        <select id="gender">
-            <option value="-1">-choose-</option>
-            <option value="0">male</option>
-            <option value="1">female</option>
-        </select>
+        <div>
+            <label class="label" for="password_input">Password</label>
+            <input class="input" type="text" id="password_input">
+            <p class="help is-danger" id="password_input_help">invalid</p>
+        </div>
 
-        <label for="about">About yourself</label>
-        <textarea id="about">
-        </textarea>
+        <div>
+            <label class="label" for="gender_select">Gender</label>
+            <select class="select" id="gender_select">
+                <option value="choose">-choose-</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+            <p class="help is-danger" id="gender_select_help">invalid</p>
+        </div>
 
-        <label for="terms"></label>
-        <input type="checkbox" id="terms">I agree to the <a href="#">terms and conditions</a>
+        <div>
+            <label class="label" for="about_textarea">About yourself</label>
+            <textarea class="textarea" id="about_textarea"></textarea>
+            <p class="help is-info" id="about_textarea_help">characters remaining: 150</p>
+        </div>
 
+        <div>
+            <label class="label" for="terms"></label>
+            <input class="checkbox" type="checkbox" id="terms"> I agree to the <a href="https://www.google.by">terms and conditions</a>
+        </div>
 
-        <input type="button" class="button is-success" value="Register">
+        <div>
+            <input type="button" class="button is-success" id="register_button" value="Register">
+        </div>
 
     </form>
+
+    <div class="content">
+        <p id="output">
+        </p>
+    </div>
+
+
 </body>
 </html>
