@@ -5,7 +5,7 @@
 
 var NAME_VALIDATE_RULE = /^\w{5,}$/i;
 var EMAIL_VALIDATE_RULE = /^\w+@\w+\.\w{2,}$/i;
-var PASSWORD_VALIDATE_RULE = /^[aeyuio]{5,}\d{3,}$/i;
+var PASSWORD_VALIDATE_RULE = /^(?=(\w*[aeyuio]){5,})(?=(\w*[0-9]){3,})\w*$/i;
 
 var validsStore = {
                     'name_input': false,
